@@ -19,7 +19,11 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
-	
+
+#ifndef _MYSQL_H_
+#define _MYSQL_H_
+
+
 #define mysql_h
 
 #include <stdio.h>
@@ -113,3 +117,4 @@ typedef struct {
     void do_query(const char *q);
 #endif
 
+#endif
