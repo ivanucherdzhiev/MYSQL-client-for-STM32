@@ -113,6 +113,3 @@ typedef struct {
     void do_query(const char *q);
 #endif
 
-
-
-#endif
