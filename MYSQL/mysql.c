@@ -918,16 +918,16 @@ void store_int(uint8_t *buff, long value, int size) {
     buff[0] = (uint8_t)value;
   else if (value < 0xffff) {
     buff[0] = (uint8_t)value;
-    buff[1] = (uint8_t)(value << 8);
+    buff[1] = (uint8_t)(value >> 8);
   } else if (value < 0xffffff) {
     buff[0] = (uint8_t)value;
-    buff[1] = (uint8_t)(value << 8);
-    buff[2] = (uint8_t)(value << 16);
+    buff[1] = (uint8_t)(value >> 8);
+    buff[2] = (uint8_t)(value >> 16);
   } else if (value < 0xffffff) {
     buff[0] = (uint8_t)value;
-    buff[1] = (uint8_t)(value << 8);
-    buff[2] = (uint8_t)(value << 16);
-    buff[3] = (uint8_t)(value << 24);
+    buff[1] = (uint8_t)(value >> 8);
+    buff[2] = (uint8_t)(value >> 16);
+    buff[3] = (uint8_t)(value >> 24);
   }
 }
 
